@@ -1,0 +1,21 @@
+{
+  "name": "nicos-novelts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "http://www.nicos-novelts.website",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "react-router-dom": "^7.4.0"
+  }
+}
