@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/nicos-novelts/", // Correct for GitHub Pages deployment
+  base: "/",  // Change this to "/" instead of "/nicos-novelts/"
 });
