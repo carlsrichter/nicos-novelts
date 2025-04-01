@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const designs = ["design1", "design2", "design3", "design4"];
@@ -18,22 +18,25 @@ const Home = () => {
   );
 };
 
-const DesignPage = ({ name }) => (
-  <div style={{ padding: "20px" }}>
-    <h2>Welcome to {name}</h2>
-    <p>This is the {name} design.</p>
-    <Link to="/">Back to Home</Link>
-  </div>
-);
+const RedirectToExternal = ({ url }) => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.location.href = url; // Redirect to the external site
+  }, [url]);
+
+  return <p>Redirecting...</p>; // Optional message while redirecting
+};
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/design1" element={<DesignPage name="Design 1" />} />
-      <Route path="/design2" element={<DesignPage name="Design 2" />} />
-      <Route path="/design3" element={<DesignPage name="Design 3" />} />
-      <Route path="/design4" element={<DesignPage name="Design 4" />} />
+      <Route path="/design1" element={<RedirectToExternal url="https://www.redbubble.com/people/nicos-novelts/shop?artistUserName=Nicos-NovelTs&asc=u&iaCode=all-departments&sortOrder=top%20selling" />} />
+      <Route path="/design2" element={<RedirectToExternal url="https://www.redbubble.com/people/nicos-novelts/shop?artistUserName=Nicos-NovelTs&asc=u&iaCode=all-departments&sortOrder=top%20selling" />} />
+      <Route path="/design3" element={<RedirectToExternal url="https://www.redbubble.com/people/nicos-novelts/shop?artistUserName=Nicos-NovelTs&asc=u&iaCode=all-departments&sortOrder=top%20selling" />} />
+      <Route path="/design4" element={<RedirectToExternal url="https://www.redbubble.com/people/nicos-novelts/shop?artistUserName=Nicos-NovelTs&asc=u&iaCode=all-departments&sortOrder=top%20selling" />} />
+
     </Routes>
   );
 };
