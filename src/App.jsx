@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useParams } from "react-router-dom";
 
 const Home = () => {
   const designs = ["design1", "design2", "design3", "design4"];
@@ -18,22 +18,23 @@ const Home = () => {
   );
 };
 
-const DesignPage = ({ name }) => (
-  <div style={{ padding: "20px" }}>
-    <h2>Welcome to {name}</h2>
-    <p>This is the {name} design.</p>
-    <Link to="/">Back to Home</Link>
-  </div>
-);
+const DesignPage = () => {
+  const { designName } = useParams();
+    const formattedName = designName.charAt(0).toUpperCase() + designName.slice(1,6) + " " + designName.slice(6);
+  return (
+    <div style={{ padding: "20px" }}>
+      <h2>Welcome to {formattedName}</h2>
+      <p>This is the {formattedName} design.</p>
+      <Link to="/">Back to Home</Link>
+    </div>
+  );
+};
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/design1" element={<DesignPage name="Design 1" />} />
-      <Route path="/design2" element={<DesignPage name="Design 2" />} />
-      <Route path="/design3" element={<DesignPage name="Design 3" />} />
-      <Route path="/design4" element={<DesignPage name="Design 4" />} />
+      <Route path="/:designName" element={<DesignPage />} />
     </Routes>
   );
 };
