@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 const RedirectToExternal = ({ url }) => {
   useEffect(() => {
@@ -7,6 +7,29 @@ const RedirectToExternal = ({ url }) => {
   }, [url]);
 
   return <p>Redirecting...</p>; // Optional message while redirecting
+};
+
+// Links Page Component
+const Links = () => {
+  const designs = [
+    "you-are-not-alone",
+    "you-are-not-alone-mirror",
+    "design3",
+    "design4"
+  ];
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Available Designs</h1>
+      <ul>
+        {designs.map((design) => (
+          <li key={design}>
+            <Link to={`/${design}`}>{design}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 const App = () => {
@@ -19,6 +42,9 @@ const App = () => {
           <RedirectToExternal url="https://www.redbubble.com/people/nicos-novelts/shop?artistUserName=Nicos-NovelTs&asc=u&iaCode=all-departments&sortOrder=top%20selling" />
         }
       />
+
+      {/* Links Page */}
+      <Route path="/links" element={<Links />} />
 
       {/* Other design redirects */}
       <Route
