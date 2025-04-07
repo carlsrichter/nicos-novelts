@@ -15,7 +15,9 @@ const Links = () => {
     "you-are-not-alone",
     "you-are-not-alone-mirror",
     "god-grant-me-the-serenity",
-    "god-grant-me-the-serenity-mirror-t"
+    "god-grant-me-the-serenity-mirror-t",
+    "one-day-at-a-time",
+    "one-day-at-a-time-mirror-t",
   ];
 
   return (
@@ -60,13 +62,13 @@ const App = () => {
       <Route
         path="/god-grant-me-the-serenity"
         element={
-          <RedirectToExternal url="https://www.redbubble.com/people/nicos-novelts/shop?artistUserName=Nicos-NovelTs&asc=u&iaCode=all-departments&sortOrder=top%20selling" />
+          <RedirectToExternal url="https://www.redbubble.com/shop/ap/169783195" />
         }
       />
       <Route
         path="/god-grant-me-the-serenity-mirror-t"
         element={
-          <RedirectToExternal url="https://www.redbubble.com/people/nicos-novelts/shop?artistUserName=Nicos-NovelTs&asc=u&iaCode=all-departments&sortOrder=top%20selling" />
+          <RedirectToExternal url="https://www.redbubble.com/shop/ap/169783064" />
         }
       />
     </Routes>
