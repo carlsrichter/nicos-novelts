@@ -71,6 +71,18 @@ const App = () => {
           <RedirectToExternal url="https://www.redbubble.com/shop/ap/169783064" />
         }
       />
+      <Route
+        path="/one-day-at-a-time"
+        element={
+          <RedirectToExternal url="https://www.redbubble.com/shop/ap/169813365" />
+        }
+      />
+      <Route
+        path="/one-day-at-a-time-mirror-t"
+        element={
+          <RedirectToExternal url="https://www.redbubble.com/shop/ap/169813484" />
+        }
+      />
     </Routes>
   );
 };
