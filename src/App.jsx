@@ -12,10 +12,10 @@ const RedirectToExternal = ({ url }) => {
 // Links Page Component
 const Links = () => {
   const designs = [
-    "XS - Rick Roll YouTube by NN - Extra-Small Print",
-    "Sm - Rick Roll YouTube by NN - Small Print",
-    "Md - Rick Roll YouTube by NN - Medium Print",
-    "Lg - Rick Roll YouTube by NN - Large Print",
+    "6rr-yt-xs",
+    "6rr-yt-sm",
+    "6rr-yt-md",
+    "6rr-yt-lg",
     "you-are-not-alone",
     "you-are-not-alone-mirror",
     "god-grant-me-the-serenity",
