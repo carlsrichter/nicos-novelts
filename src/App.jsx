@@ -12,6 +12,10 @@ const RedirectToExternal = ({ url }) => {
 // Links Page Component
 const Links = () => {
   const designs = [
+    "XS - Rick Roll YouTube by NN - Extra-Small Print",
+    "Sm - Rick Roll YouTube by NN - Small Print",
+    "Md - Rick Roll YouTube by NN - Medium Print",
+    "Lg - Rick Roll YouTube by NN - Large Print",
     "you-are-not-alone",
     "you-are-not-alone-mirror",
     "god-grant-me-the-serenity",
@@ -49,6 +53,22 @@ const App = () => {
       <Route path="/links" element={<Links />} />
 
       {/* Other design redirects */}
+      <Route
+        path="/6rr-yt-xs"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170274276" />}
+      />
+      <Route
+        path="/6rr-yt-sm"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170274464" />}
+      />
+      <Route
+        path="/6rr-yt-md"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170274534" />}
+      />
+      <Route
+        path="/6rr-yt-lg"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170274616" />}
+      />
       <Route
         path="/you-are-not-alone"
         element={<RedirectToExternal url="http://redbubble.com/shop/ap/169662999" />}
