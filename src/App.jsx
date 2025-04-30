@@ -12,6 +12,12 @@ const RedirectToExternal = ({ url }) => {
 // Links Page Component
 const Links = () => {
   const designs = [
+    "7-i-a-e-mirror-sm",
+    "7-i-a-e-mirror-md",
+    "7-i-a-e-mirror-lg",
+    "i-am-enough-sm",
+    "i-am-enough-md",
+    "i-am-enough-lg",
     "6rr-yt-xs",
     "6rr-yt-sm",
     "6rr-yt-md",
@@ -54,6 +60,32 @@ const App = () => {
 
       {/* Other design redirects */}
       <Route
+        path="/7-i-a-e-mirror-sm"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170338070" />}
+      />
+       <Route
+        path="/7-i-a-e-mirror-md"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170338199" />}
+      />
+       <Route
+        path="/7-i-a-e-mirror-lg"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170338272" />}
+      />
+
+       <Route
+        path="/i-am-enough-sm"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170341070" />}
+      />
+      <Route
+        path="/i-am-enough-md"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170341136" />}
+      />
+      <Route
+        path="/i-am-enough-lg"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170341167" />}
+      />
+
+      <Route
         path="/6rr-yt-xs"
         element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170274276" />}
       />
@@ -69,6 +101,7 @@ const App = () => {
         path="/6rr-yt-lg"
         element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170274616" />}
       />
+
       <Route
         path="/you-are-not-alone"
         element={<RedirectToExternal url="http://redbubble.com/shop/ap/169662999" />}
@@ -79,6 +112,7 @@ const App = () => {
           <RedirectToExternal url="https://www.redbubble.com/shop/ap/169774936" />
         }
       />
+
       <Route
         path="/god-grant-me-the-serenity"
         element={
@@ -91,6 +125,7 @@ const App = () => {
           <RedirectToExternal url="https://www.redbubble.com/shop/ap/169783064" />
         }
       />
+
       <Route
         path="/one-day-at-a-time"
         element={
