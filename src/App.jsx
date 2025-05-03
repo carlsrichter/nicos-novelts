@@ -12,6 +12,7 @@ const RedirectToExternal = ({ url }) => {
 // Links Page Component
 const Links = () => {
   const designs = [
+    "C3-Y-T-L-L-Lg",
     "C1-y-t-a-l-h-lg",
     "7-i-a-e-mirror-sm",
     "7-i-a-e-mirror-md",
@@ -60,6 +61,10 @@ const App = () => {
       <Route path="/links" element={<Links />} />
 
       {/* Other design redirects */}
+      <Route
+        path="/C3-Y-T-L-L-Lg"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170409688" />}
+      />
       <Route
         path="/C1-y-t-a-l-h-lg"
         element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170409284" />}
