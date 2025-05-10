@@ -12,6 +12,7 @@ const RedirectToExternal = ({ url }) => {
 // Links Page Component
 const Links = () => {
   const designs = [
+    "H7-rip-k-Lg",
     "A1-a.-i.-D.-lg",
     "C3-Y-T-L-L-Lg",
     "C1-y-t-a-l-h-lg",
@@ -63,6 +64,11 @@ const App = () => {
 
       {/* Other design redirects */}
       {/* -----------------------------LINKS START HERE ------------------------------ */}
+      <Route
+        path="/H7-rip-k-Lg"
+        element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170578990" />}
+      />
+      
       <Route
         path="/A1-a.-i.-D.-lg"
         element={<RedirectToExternal url="https://www.redbubble.com/shop/ap/170556424" />}
